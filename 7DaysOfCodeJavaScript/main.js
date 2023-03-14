@@ -1,4 +1,5 @@
 /*Exercicio do primeiro dia*/
+/*
 let numeroUm = 1;
 let stringUm = '1';
 let numeroTrinta = 30;
@@ -23,9 +24,9 @@ if (numeroTrinta === stringTrinta) {
   } else {
     console.log('As variáveis numeroDez e stringDez não tem o mesmo valor')
   }
-
+    */
   /*Exercicio do segundo dia*/
-
+  /*
   const nome = prompt("Olá, primeiramente qual o seu nome?");
   const  idade = prompt(`É um prazer ${nome} vamos continuar, quantos anos você tem?`);
   const aprendendoLinguagem = prompt(`${nome}, vou te fazer mais uma pergunta, Qual linguagem de programação você está estutando? `);
@@ -43,3 +44,17 @@ if (numeroTrinta === stringTrinta) {
         res.innerHTML = apresentacao + " Ahh que pena... Já tentou aprender outras linguagens?";
         
     } 
+      */
+
+    /*Exercicio do terceiro dia*/
+
+    var novoNome = prompt("Qual seu nome? ");
+    var interacao = prompt(`Olá ${novoNome} vamos jogar o jogo do aprendizado? Digite [1] para "Sim" e [2] para "Não"`);
+    
+    if (interacao == 1 || interacao == "Sim" || interacao == "sim") {
+        let resEstudo = prompt("Qual linha de estudo você quer seguir?")
+      } else if (interacao == 2 || interacao == "Não" || interacao == "não") {
+        console.log("Ok, quando estiver com tempo retorne.")
+      } else {
+        console.log("você não digitou uma resposta valida.")
+      }
