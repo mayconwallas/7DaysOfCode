@@ -47,14 +47,10 @@ if (numeroTrinta === stringTrinta) {
       */
 
     /*Exercicio do terceiro dia*/
-    let resCaminho;
     const novoNome = prompt("Qual seu nome? ");
     const interacao = prompt(`Olá ${novoNome} vamos jogar o jogo do aprendizado? Digite [1] para "Sim" e [2] para "Não"`);
     
-    
-
-
-      function vaiJogarOuNao(interacao) {
+    function vaiJogarOuNao(interacao) {
         if (interacao == 1 || interacao == "Sim" || interacao == "sim") {
           let interacao = prompt('Qual linha de estudo você quer seguir?[1] para "Front-End" e [2] para "Back-End"');
           return interacao;
@@ -65,6 +61,16 @@ if (numeroTrinta === stringTrinta) {
         }      
       }
       
-      vaiJogarOuNao(interacao);
-      console.log(interacao);
-      console.log(resCaminho);
+      let resCaminho = vaiJogarOuNao(interacao);
+      function caminho(resCaminho) {
+        if (resCaminho == 1 || resCaminho == "Front-End" || interacao == "frontend") {
+          let frameWorks = prompt('Qual frameWorks você quer aprender ?[1] para "React", [2] para "Angular" ou [3] para "Vue.js"');
+          return frameWorks;
+        } else if (interacao == 2 || interacao == "Back-End" || interacao == "backend") {let frameWorks = prompt('Qual frameWorks você quer aprender ?[1] para "C#", [2] para "Java" ou [3] para "Node.js"');
+        return frameWorks;
+        } else {
+          alert("você não digitou uma resposta valida.")
+        }      
+      }
+
+      let aprendendo = caminho(resCaminho);
