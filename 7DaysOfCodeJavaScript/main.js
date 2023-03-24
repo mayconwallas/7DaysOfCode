@@ -47,14 +47,24 @@ if (numeroTrinta === stringTrinta) {
       */
 
     /*Exercicio do terceiro dia*/
-
-    var novoNome = prompt("Qual seu nome? ");
-    var interacao = prompt(`Olá ${novoNome} vamos jogar o jogo do aprendizado? Digite [1] para "Sim" e [2] para "Não"`);
+    let resCaminho;
+    const novoNome = prompt("Qual seu nome? ");
+    const interacao = prompt(`Olá ${novoNome} vamos jogar o jogo do aprendizado? Digite [1] para "Sim" e [2] para "Não"`);
     
-    if (interacao == 1 || interacao == "Sim" || interacao == "sim") {
-        let resEstudo = prompt("Qual linha de estudo você quer seguir?")
-      } else if (interacao == 2 || interacao == "Não" || interacao == "não") {
-        console.log("Ok, quando estiver com tempo retorne.")
-      } else {
-        console.log("você não digitou uma resposta valida.")
+    
+
+
+      function vaiJogarOuNao(interacao) {
+        if (interacao == 1 || interacao == "Sim" || interacao == "sim") {
+          let interacao = prompt('Qual linha de estudo você quer seguir?[1] para "Front-End" e [2] para "Back-End"');
+          return interacao;
+        } else if (interacao == 2 || interacao == "Não" || interacao == "não") {
+          alert("Ok, quando estiver com tempo retorne.");
+        } else {
+          alert("você não digitou uma resposta valida.")
+        }      
       }
+      
+      vaiJogarOuNao(interacao);
+      console.log(interacao);
+      console.log(resCaminho);
