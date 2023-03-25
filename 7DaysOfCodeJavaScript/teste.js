@@ -1,10 +1,14 @@
-const jogar = 'Qual linha de estudo você quer seguir?[1] para "Front-End" e [2] para "Back-End"';
+/*Inicio programa*/
+var resposta = 1;
+while (resposta == 1 ) {
+let res = document.querySelector(".escreveTela")
+const novoNome = prompt("Qual seu nome? ");
+
+/*variavesi usadas mais abaixo*/
+const jogar = `Olá ${novoNome} o que vc vai estudar?[1] para "Front-End" e [2] para "Back-End"`;
 const frontend = 'Qual frameWorks você quer aprender ?[1] para "React", [2] para "Angular" ou [3] para "Vue.js"';
 const backend = 'Qual frameWorks você quer aprender ?[1] para "C#", [2] para "Java" ou [3] para "Node.js"';
-
-
-const novoNome = prompt("Qual seu nome? ");
-const simOuNao = prompt(`Olá ${novoNome} vamos jogar o jogo do aprendizado? Digite [1] para "Sim" e [2] para "Não"`);
+const vaiContinuar = 'Você quer estudar mais? [1] para Sim e [2] para Não'
 
 
 function conversaPorprompt(mensagem) {
@@ -12,15 +16,18 @@ function conversaPorprompt(mensagem) {
     return interacao;
 }
 
-function vaiJogarOuNao(interacao) {
-    if (interacao == 1 || interacao == "Sim" || interacao == "sim") {
-      let interacao = conversaPorprompt(jogar);
-      return interacao;
-    } else if (interacao == 2 || interacao == "Não" || interacao == "não") {
-        alert("Ok, quando estiver com tempo retorne.")
-    } else {
-        alert("você não digitou uma resposta valida.")
-    }      
+function vaiJogarOuNao() {
+  let interacao = conversaPorprompt(jogar);
+  return interacao; 
+  }
+
+  function oqueEstuda(interacao) {
+    if (interacao == 1 ){
+      let estudando = "Front-End"
+      return estudando
+    }
+    let estudando = "Back-End"
+      return estudando
   }
   
   
@@ -36,7 +43,48 @@ function vaiJogarOuNao(interacao) {
     }      
   }
 
+  function queLinhaEstuda(interacao) {
+    if (interacao == 1 ){
+      let estudando = "React"
+      return estudando
+    } else if (interacao == 2){
+      let estudando = "Angular"
+        return estudando
+    }
+    let estudando = "Vue.js"
+        return estudando
+  }
+
+  function queLinhaEstuda2(interacao) {
+    if (interacao == 1 ){
+      let estudando = "C#"
+      return estudando
+    } else if (interacao == 2){
+      let estudando = "JAVA"
+        return estudando
+    }
+    let estudando = "Node.js"
+        return estudando
+  }
+
+  function escolha(backOuFront) {
+    if (backOuFront == "Front-End") {
+      let linhaDeEstudo = queLinhaEstuda(aprendendo)
+      return linhaDeEstudo;
+    } 
+    if(backOuFront == "Back-End") {
+      let linhaDeEstudo2 = queLinhaEstuda2(aprendendo);
+      return linhaDeEstudo2;
+    }
+  }
+
   
 
-  let resCaminho = vaiJogarOuNao(simOuNao);
+  let resCaminho = vaiJogarOuNao();
+  let estudando = oqueEstuda(resCaminho);
   let aprendendo = caminho(resCaminho);
+  let LinhaEscolha = escolha(estudando);
+  res.innerHTML = `Parabéns ${novoNome} você escolheou o caminho do ${estudando} e estudo tudo de ${LinhaEscolha}.`
+  resposta = conversaPorprompt(vaiContinuar);
+}
+  
