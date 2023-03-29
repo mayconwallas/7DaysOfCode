@@ -2,6 +2,11 @@ body{
     background: #4ccbeb;
     color: white;
 }
+
+.lista-titulo {
+    text-align: center;
+}
+
 .escreveTela {
     font-size: 2.5em;
     text-align: center;
